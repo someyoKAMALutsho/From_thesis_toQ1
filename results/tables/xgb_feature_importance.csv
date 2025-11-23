@@ -1,0 +1,12 @@
+feature,importance
+pm25_ma3,0.69036186
+pm25_lag1,0.09851149
+season,0.055934247
+abs_lat,0.025578698
+month_cos,0.02554521
+climate_zone_code,0.023285609
+month_sin,0.02133554
+dist_from_prime_meridian,0.020339055
+northern_hemisphere,0.018800909
+days_since_start,0.012197877
+year_norm,0.008109502

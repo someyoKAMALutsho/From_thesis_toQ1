@@ -1,0 +1,5 @@
+Region,Total_Samples,Unique_Grid_Cells,Avg_Samples_Per_Cell,Lat_Range,Lon_Range
+NE,509937,8499,59.999647017296155,0.0 to 69.0,0.0 to 179.0
+NW,289732,4829,59.998343342306896,0.0 to 69.0,-180.0 to -1.0
+SE,145980,2433,60.0,-60.0 to -1.0,0.0 to 179.0
+SW,103860,1731,60.0,-60.0 to -1.0,-180.0 to -1.0

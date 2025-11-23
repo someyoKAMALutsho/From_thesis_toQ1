@@ -1,0 +1,5 @@
+Region,Avg_Latitude,Avg_Longitude,Latitude_Std,Longitude_Std,Avg_Abs_Latitude,Avg_Climate_Zone
+NE,40.322357,72.49561,19.194933,44.487,40.322357,temperate
+NW,45.394436,-85.36375,19.184166,44.40528,45.394436,temperate
+SE,-22.363268,90.81964,15.432576,54.539024,22.363268,tropical
+SW,-26.262474,-64.30754,18.55186,24.57479,26.262474,tropical

@@ -1,0 +1,2 @@
+subsample,num_leaves,n_estimators,min_child_samples,max_depth,learning_rate,colsample_bytree,cv_r2,test_r2,test_mae,test_rmse,tuning_time_min,baseline_r2,r2_improvement
+0.6,70,200,20,10,0.15,1.0,0.5990646540896761,0.6075868032282583,6.944193972594901,12.092018200105406,1.6090524951616922,0.532,0.07558680322825828

@@ -26,9 +26,12 @@ except ImportError:
     exit()
 
 # === CONFIGURATION ===
-DATA_DIR = Path(r"D:\PM25_Satellite_Research\data\processed")
-FEATURES_DIR = Path(r"D:\PM25_Satellite_Research\data\features")
-RESULTS_DIR = Path(r"D:\PM25_Satellite_Research\results\tables")
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+DATA_DIR    = PROJECT_DIR / "data" / "processed"
+FEATURES_DIR = PROJECT_DIR / "data" / "features"
+RESULTS_DIR = PROJECT_DIR / "results" / "tables"
 
 FEATURES_DIR.mkdir(parents=True, exist_ok=True)
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)

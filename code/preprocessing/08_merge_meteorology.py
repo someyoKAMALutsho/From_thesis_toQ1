@@ -21,8 +21,11 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # === CONFIGURATION ===
-DATA_DIR = Path(r"D:\PM25_Satellite_Research\data\processed")
-FEATURES_DIR = Path(r"D:\PM25_Satellite_Research\data\features")
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+DATA_DIR    = PROJECT_DIR / "data" / "processed"
+FEATURES_DIR = PROJECT_DIR / "data" / "features"
 INPUT_FILE = DATA_DIR / "pm25_with_features.parquet"
 OUTPUT_FILE = DATA_DIR / "pm25_with_meteorology.parquet"
 

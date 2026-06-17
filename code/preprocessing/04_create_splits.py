@@ -21,8 +21,11 @@ from pathlib import Path
 from sklearn.model_selection import train_test_split
 
 # === CONFIGURATION ===
-INPUT_FILE = Path(r"D:\PM25_Satellite_Research\data\processed\pm25_with_features.parquet")
-OUTPUT_DIR = Path(r"D:\PM25_Satellite_Research\data\processed")
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+INPUT_FILE  = PROJECT_DIR / "data" / "processed" / "pm25_with_features.parquet"
+OUTPUT_DIR  = PROJECT_DIR / "data" / "processed"
 
 # Temporal split date (train up to June 2022, test from July 2022 onwards)
 SPLIT_YEAR = 2022

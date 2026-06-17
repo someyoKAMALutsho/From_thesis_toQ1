@@ -17,10 +17,13 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # === CONFIGURATION ===
-DATA_DIR = Path(r"D:\PM25_Satellite_Research\data\processed")
-LOCO_DIR = DATA_DIR / "loco_folds"
-RESULTS_DIR = Path(r"D:\PM25_Satellite_Research\results\tables")
-FIGURES_DIR = Path(r"D:\PM25_Satellite_Research\results\figures")
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+DATA_DIR    = PROJECT_DIR / "data" / "processed"
+LOCO_DIR    = DATA_DIR / "loco_folds"
+RESULTS_DIR = PROJECT_DIR / "results" / "tables"
+FIGURES_DIR = PROJECT_DIR / "results" / "figures"
 
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 

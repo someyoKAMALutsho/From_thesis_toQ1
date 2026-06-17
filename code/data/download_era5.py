@@ -16,7 +16,10 @@ print("\nDownloading 5 years × 365 days of global ERA5 data...")
 print("This will take ~30–45 minutes. Do NOT close this window.\n")
 
 # Ensure output directory exists
-output_dir = Path(r'D:\PM25_Satellite_Research\data\raw')
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+output_dir  = PROJECT_DIR / "data" / "raw"
 output_dir.mkdir(parents=True, exist_ok=True)
 
 client = cdsapi.Client()

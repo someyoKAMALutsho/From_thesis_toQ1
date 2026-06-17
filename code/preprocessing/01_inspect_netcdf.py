@@ -7,7 +7,10 @@ import xarray as xr
 from pathlib import Path
 
 # Path to your NetCDF files
-nc_dir = Path(r"D:\PM25_Satellite_Research\data\raw\monthly_netcdf\2019")
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+nc_dir      = PROJECT_DIR / "data" / "raw" / "monthly_netcdf" / "2019"
 
 # Get first .nc file
 nc_files = list(nc_dir.glob("*.nc"))

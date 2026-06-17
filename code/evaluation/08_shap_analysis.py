@@ -28,10 +28,13 @@ except ImportError:
     SHAP_AVAILABLE = False
 
 # === CONFIGURATION ===
-DATA_DIR = Path(r"D:\PM25_Satellite_Research\data\processed")
-MODEL_DIR = Path(r"D:\PM25_Satellite_Research\models\trained_checkpoints")
-LOCO_DIR = DATA_DIR / "loco_folds"
-FIGURES_DIR = Path(r"D:\PM25_Satellite_Research\results\figures")
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+DATA_DIR    = PROJECT_DIR / "data" / "processed"
+MODEL_DIR   = PROJECT_DIR / "models" / "trained_checkpoints"
+LOCO_DIR    = DATA_DIR / "loco_folds"
+FIGURES_DIR = PROJECT_DIR / "results" / "figures"
 
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 

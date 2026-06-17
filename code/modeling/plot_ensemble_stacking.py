@@ -1,9 +1,15 @@
+from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
 
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+RESULTS_DIR = PROJECT_DIR / "results" / "modeling"
+
 # Load both CSVs
-loco_csv = pd.read_csv(r"D:\PM25_Satellite_Research\results\modeling\loco_cv_results_gpu.csv")
-stacking_csv = pd.read_csv(r"D:\PM25_Satellite_Research\results\modeling\stacking_results.csv")
+loco_csv = pd.read_csv(RESULTS_DIR / "loco_cv_results_gpu.csv")
+stacking_csv = pd.read_csv(RESULTS_DIR / "stacking_results.csv")
 
 # Extract zone names
 zones = stacking_csv['zone']
@@ -27,6 +33,6 @@ ax.set_ylabel('R²')
 ax.set_title('R² by Zone: LightGBM vs Stacking Ensemble')
 ax.legend()
 plt.tight_layout()
-plt.savefig(r'D:\PM25_Satellite_Research\results\modeling\ensemble_stacking_failure.png', dpi=300)
+plt.savefig(RESULTS_DIR / 'ensemble_stacking_failure.png', dpi=300)
 plt.close()
 print("✓ Saved: ensemble_stacking_failure.png")

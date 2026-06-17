@@ -6,8 +6,11 @@ from pathlib import Path
 from scipy.spatial import cKDTree
 import time
 
-DATA_DIR = Path(r"D:\PM25_Satellite_Research\data\processed")
-FEATURES_DIR = Path(r"D:\PM25_Satellite_Research\data\features")
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+DATA_DIR    = PROJECT_DIR / "data" / "processed"
+FEATURES_DIR = PROJECT_DIR / "data" / "features"
 OUTPUT_FILE = DATA_DIR / "pm25_merra2_50k.parquet"
 LOCO_DIR = DATA_DIR / "loco_koppen_splits"
 LOCO_DIR.mkdir(exist_ok=True)

@@ -22,10 +22,13 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # === CONFIGURATION ===
-DATA_DIR = Path(r"D:\PM25_Satellite_Research\data\processed")
-LOCO_DIR = DATA_DIR / "loco_folds"
-MODEL_DIR = Path(r"D:\PM25_Satellite_Research\models\trained_checkpoints")
-RESULTS_DIR = Path(r"D:\PM25_Satellite_Research\results\tables")
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+DATA_DIR    = PROJECT_DIR / "data" / "processed"
+LOCO_DIR    = DATA_DIR / "loco_folds"
+MODEL_DIR   = PROJECT_DIR / "models" / "trained_checkpoints"
+RESULTS_DIR = PROJECT_DIR / "results" / "tables"
 
 # Feature columns (exclude target and metadata)
 EXCLUDE_COLS = ['pm25', 'lat', 'lon', 'year', 'month', 'climate_zone', 'quadrant']

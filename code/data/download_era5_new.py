@@ -20,7 +20,10 @@ except ImportError:
     from ecmwf.datasets import dataset
 
 # Ensure output directory exists
-output_dir = Path(r'D:\PM25_Satellite_Research\data\raw')
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+output_dir  = PROJECT_DIR / "data" / "raw"
 output_dir.mkdir(parents=True, exist_ok=True)
 
 print("\nDownloading ERA5 daily 2019–2023...")

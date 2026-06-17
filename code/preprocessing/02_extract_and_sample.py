@@ -18,8 +18,11 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # === CONFIGURATION ===
-NC_DIR = Path(r"D:\PM25_Satellite_Research\data\raw\monthly_netcdf")
-OUTPUT_FILE = Path(r"D:\PM25_Satellite_Research\data\processed\pm25_sampled.parquet")
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+NC_DIR      = PROJECT_DIR / "data" / "raw" / "monthly_netcdf"
+OUTPUT_FILE = PROJECT_DIR / "data" / "processed" / "pm25_sampled.parquet"
 
 # Spatial sampling: take every Nth point (reduces 468M to manageable size)
 SPATIAL_STRIDE = 100  # Every 100th point → ~47k cells per month → ~2.8M total

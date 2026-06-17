@@ -6,7 +6,10 @@ from pathlib import Path
 from tqdm import tqdm
 
 # --- CONFIGURABLES ---
-OUTDIR = Path(r'D:\PM25_Satellite_Research\data\merra2_hourly')
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+OUTDIR      = PROJECT_DIR / "data" / "merra2_hourly"
 OUTDIR.mkdir(parents=True, exist_ok=True)
 AGG_FILE_CSV = OUTDIR / "monthly_meteorology_merra2_2019_2023.csv"
 AGG_FILE_PARQUET = OUTDIR / "monthly_meteorology_merra2_2019_2023.parquet"

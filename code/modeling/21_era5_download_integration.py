@@ -32,8 +32,11 @@ print("=" * 70)
 print("ERA5 INTEGRATION WORKFLOW")
 print("=" * 70)
 
-DATA_DIR = Path(r"D:\PM25_Satellite_Research\data\processed")
-RAW_DATA_DIR = Path(r"D:\PM25_Satellite_Research\data\raw")
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+DATA_DIR    = PROJECT_DIR / "data" / "processed"
+RAW_DATA_DIR = PROJECT_DIR / "data" / "raw"
 RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 print("""

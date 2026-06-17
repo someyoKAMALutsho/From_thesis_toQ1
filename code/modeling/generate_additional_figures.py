@@ -3,7 +3,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
 
-RESULTS_DIR = Path(r"D:\PM25_Satellite_Research\results\modeling")
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+RESULTS_DIR = PROJECT_DIR / "results" / "modeling"
 
 def plot_shap_by_zone():
     fpath = RESULTS_DIR / "shap_by_zone.csv"

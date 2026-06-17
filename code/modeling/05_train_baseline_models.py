@@ -44,9 +44,12 @@ except ImportError:
     LGB_AVAILABLE = False
 
 # === CONFIGURATION ===
-DATA_DIR = Path(r"D:\PM25_Satellite_Research\data\processed")
-MODEL_DIR = Path(r"D:\PM25_Satellite_Research\models\trained_checkpoints")
-RESULTS_DIR = Path(r"D:\PM25_Satellite_Research\results\tables")
+SCRIPT_DIR  = Path(__file__).resolve().parent
+CODE_DIR    = SCRIPT_DIR.parent
+PROJECT_DIR = CODE_DIR.parent
+DATA_DIR    = PROJECT_DIR / "data" / "processed"
+MODEL_DIR   = PROJECT_DIR / "models" / "trained_checkpoints"
+RESULTS_DIR = PROJECT_DIR / "results" / "tables"
 
 # Create directories
 MODEL_DIR.mkdir(parents=True, exist_ok=True)
